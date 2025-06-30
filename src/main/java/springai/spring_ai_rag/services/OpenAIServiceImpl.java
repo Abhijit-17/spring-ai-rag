@@ -37,7 +37,7 @@ public class OpenAIServiceImpl implements OpenAIService {
         // In this case, we are retrieving the top 4 documents.
         List<Document> documents = vectorStore.similaritySearch(SearchRequest.builder()
                 .query(question.question())
-                .topK(4)
+                .topK(10)
                 .build());
         
         // Extract the text content from the retrieved documents.
