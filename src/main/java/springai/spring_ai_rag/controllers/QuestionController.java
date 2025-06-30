@@ -17,6 +17,11 @@ public class QuestionController {
 
     private final OpenAIService openAIService;
 
+    //constructor injection
+    public QuestionController(OpenAIService openAIService) {
+        this.openAIService = openAIService;
+    }
+
     @PostMapping("/ask/question")
     public Answer postMethodName(@RequestBody Question question) {
         return openAIService.getAnswer(question);
