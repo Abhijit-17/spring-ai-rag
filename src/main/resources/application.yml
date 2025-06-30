@@ -7,4 +7,6 @@ spring:
 asb:
   aiapp:
     vectorStorePath: /tmp/vectorstore.json
+    documentsToLoad: 
+        - classpath:/movies500.csv
 
